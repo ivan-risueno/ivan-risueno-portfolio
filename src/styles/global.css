@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Sora:wght@100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+p {
+  font-family: 'Host Grotesk', 'Work Sans', "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.767);
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+
+  strong {
+    color: rgba(255, 255, 255, 0.874);
+    font-weight: 500;
+  }
+}
+
+body {
+  background-color: black;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-image: url('/src/assets/bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+main {
+  max-width: 60rem;
+  margin: auto;
+  padding: 2rem;
+}
+
+.page-enter {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slide-up-fade 0.6s ease-out forwards;
+}
+
+@keyframes slide-up-fade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter>* {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slide-up-fade 0.6s ease-out forwards;
+}
+
+.page-enter> :nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.page-enter> :nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.page-enter> :nth-child(3) {
+  animation-delay: 0.3s;
+}
