@@ -9,19 +9,27 @@ import Contact from "./icons/Contact.astro";
 <div>
   <nav>
     <container>
-      <button class="irisueno" onclick="window.location.href='/'">
+      <a class="irisueno" href="/">
         <p class="i">I</p>
         <p class="risueno">Risueno</p>
-      </button>
+      </a>
       <ul class="menu">
-        <li class="icon"><About /></li>
-        <li class="tag"><p>About me</p></li>
-        <li class="icon"><Projects /></li>
-        <li class="tag"><p>Projects</p></li>
-        <li class="icon"><Resume /></li>
-        <li class="tag"><p>Resume</p></li>
-        <li class="icon"><Contact /></li>
-        <li class="tag"><p>Contact</p></li>
+        <a href="/about">
+          <li class="icon"><About /></li>
+          <li class="tag"><p>About me</p></li>
+        </a>
+        <a href="/projects">
+          <li class="icon"><Projects /></li>
+          <li class="tag"><p>Projects</p></li>
+        </a>
+        <a href="/resume">
+          <li class="icon"><Resume /></li>
+          <li class="tag"><p>Resume</p></li>
+        </a>
+        <a href="/contact">
+          <li class="icon"><Contact /></li>
+          <li class="tag"><p>Contact</p></li>
+        </a>
       </ul>
     </container>
   </nav>
