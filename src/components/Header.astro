@@ -1,11 +1,28 @@
 ---
 import "../styles/header.css";
+import About from "./icons/About.astro";
+import Projects from "./icons/Projects.astro";
+import Resume from "./icons/Resume.astro";
+import Contact from "./icons/Contact.astro";
 ---
 
 <div>
   <nav>
     <container>
-      
+      <button class="irisueno" onclick="window.location.href='/'">
+        <p class="i">I</p>
+        <p class="risueno">Risueno</p>
+      </button>
+      <ul class="menu">
+        <li class="icon"><About /></li>
+        <li class="tag"><p>About me</p></li>
+        <li class="icon"><Projects /></li>
+        <li class="tag"><p>Projects</p></li>
+        <li class="icon"><Resume /></li>
+        <li class="tag"><p>Resume</p></li>
+        <li class="icon"><Contact /></li>
+        <li class="tag"><p>Contact</p></li>
+      </ul>
     </container>
   </nav>
 </div>
