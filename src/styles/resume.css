@@ -1,0 +1,34 @@
+.mobile-hint {
+  display: none;
+}
+
+.lang-btn {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .mobile-hint {
+    display: inline;
+    font-size: 16px;
+  }
+
+  .resume-link-download {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .resume-link-download:hover {
+    color: #ff6347;
+  }
+
+  .pdf-viewer {
+    display: none;
+  }
+
+  .language-selector {
+    display: none;
+  }
+}
