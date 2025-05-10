@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Sora:wght@100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 p {
   font-family: 'Host Grotesk', 'Work Sans', "Inter", sans-serif;
@@ -64,4 +65,31 @@ main {
 
 .page-enter> :nth-child(3) {
   animation-delay: 0.3s;
+}
+
+article {
+  padding: 0rem 0rem;
+  transition: padding 0.2s ease;
+
+  @media (min-width: 640px) {
+    padding: 4rem 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 4rem 8rem;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 8rem 4rem;
+  }
+
+  h2 {
+    margin: 2 rem auto 2 rem auto;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+  }
 }
