@@ -1,0 +1,88 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+import "../styles/contact.css";
+---
+
+<BaseLayout title="Contact | Iván Risueño">
+  <div class="contact-container">
+    <h2 class="contact-title">Contact Me</h2>
+    <p>Use this form or send me an <a href="mailto:ivan.risueno@outlook.com"><strong>email</strong></a>.</p>
+    <form
+      id="contact-form"
+      name="contact form"
+      class="contact-form"
+      action="https://usebasin.com/f/b23bb8c1ba03"
+      method="POST"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+
+      <div class="form-group">
+        <input
+          type="text"
+          name="name"
+          id="contact-name"
+          class="form-input"
+          placeholder="Your name"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          id="contact-email"
+          class="form-input"
+          inputmode="email"
+          placeholder="Your contact email"
+          required
+        />
+        <textarea
+          name="message"
+          id="contact-message"
+          class="form-input"
+          rows="4"
+          placeholder="Your message"
+          set:text=""
+          required
+        />
+        <input
+          id="emai"
+          type="text"
+          name="emai"
+          class="sr-only"
+          tabindex="-1"
+        />
+      </div>
+      <button type="submit" class="submit-button"> Submit </button>
+    </form>
+    <div id="success-dialog" class="dialog hidden">
+      <p>Thanks for your message! I’ll get back to you soon.</p>
+    </div>
+  </div>
+
+  <script>
+    const xhr = new XMLHttpRequest();
+    const form = document.getElementById("contact-form") as HTMLFormElement;
+
+    const dialog = document.getElementById("success-dialog");
+
+    const handleFormSubmission = (event: Event) => {
+      event.preventDefault();
+      const formData = new FormData(form);
+
+      xhr.open("POST", form.action, true);
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.send(formData);
+
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          form.reset();
+          dialog?.classList.remove("hidden");
+        } else {
+          console.log("Form submission failed.");
+        }
+      };
+    };
+
+    form?.addEventListener("submit", handleFormSubmission, true);
+  </script>
+</BaseLayout>
