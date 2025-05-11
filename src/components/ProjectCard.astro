@@ -1,0 +1,23 @@
+---
+import "../styles/global.css";
+import "../styles/project.css";
+import TechTag from "./TechTag.astro";
+const { project } = Astro.props;
+const { title, summary, tags, img, githubUrl, publishedAt } = project.data;
+---
+
+<a
+  href={githubUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="project-card"
+  style={`background-image: url(${"/src/assets/images/" + img});`}
+>
+  <div class="overlay">
+    <h3 class="project-title">{title}</h3>
+    <div class="tags">
+      {tags.map((tag: "") => <TechTag tag={tag} />)}
+      <p class="project-summary">{summary}</p>
+    </div>
+  </div></a
+>

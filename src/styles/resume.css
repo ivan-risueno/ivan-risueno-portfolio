@@ -1,3 +1,9 @@
+.resume {
+  @media (min-width: 1280px) {
+    padding: 0 10px 0 10px;
+  }
+}
+
 .mobile-hint {
   display: none;
 }

@@ -1,0 +1,14 @@
+.tech-tag {
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  border-radius: 1em;
+  background-color: #6b6b6b;
+  color: #333;
+  font-family: 'Open Sans', Courier, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
