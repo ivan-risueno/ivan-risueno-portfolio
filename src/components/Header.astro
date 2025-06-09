@@ -4,6 +4,9 @@ import About from "./icons/About.astro";
 import Projects from "./icons/Projects.astro";
 import Resume from "./icons/Resume.astro";
 import Contact from "./icons/Contact.astro";
+
+const { pathname } = Astro.url;
+
 ---
 
 <div>
@@ -14,22 +17,30 @@ import Contact from "./icons/Contact.astro";
         <p class="risueno">Risueno</p>
       </a>
       <ul class="menu">
+        { pathname !== "/about" &&
         <a href="/about">
           <li class="icon"><About /></li>
           <li class="tag"><p>About me</p></li>
         </a>
-        <a href="/projects">
-          <li class="icon"><Projects /></li>
-          <li class="tag"><p>Projects</p></li>
-        </a>
-        <a href="/resume">
-          <li class="icon"><Resume /></li>
-          <li class="tag"><p>Resume</p></li>
-        </a>
-        <a href="/contact">
-          <li class="icon"><Contact /></li>
-          <li class="tag"><p>Contact</p></li>
-        </a>
+        }
+        { pathname !== "/projects" &&
+          <a href="/projects">
+            <li class="icon"><Projects /></li>
+            <li class="tag"><p>Projects</p></li>
+          </a>
+        }
+        { pathname !== "/resume" &&
+          <a href="/resume">
+            <li class="icon"><Resume /></li>
+            <li class="tag"><p>Resume</p></li>
+          </a>
+        }
+        { pathname !== "/contact" &&
+          <a href="/contact">
+            <li class="icon"><Contact /></li>
+            <li class="tag"><p>Contact</p></li>
+          </a>
+        }
       </ul>
     </container>
   </nav>
