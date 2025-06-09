@@ -1,80 +1,16 @@
 ---
+import Timeline from "../components/Timeline.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import '../styles/introduction.css'
+import "../styles/global.css";
 ---
 
 <BaseLayout title="About | Iván Risueño">
   <article class="intro" aria-labelledby="about-me-title">
-    <h2>Behind the Code</h2>
-
+    <h2 id="about-me-title">About Me</h2>
     <p>
-      I'm <strong>Iván Risueño Martín</strong>, a junior full-stack
-      developer passionate about software, its architecture, and continuous
-      learning.
+      This section covers my most important milestones in my career as an engineer.
+      I will be updating it as I achieve new goals and start new stages in my life.
     </p>
-
-    <p>
-      My interest in technology started early. I grew up surrounded by it,
-      always going beyond what the average mobile device user would explore.
-      That curiosity—and a deep love for video games—naturally led me to pursue
-      a degree in Computer Engineering at <strong>UPC</strong> in 2019, where I specialized
-      in <strong>Software Engineering</strong>.
-    </p>
-
-    <p>
-      Over the years, I've grown increasingly fascinated by <strong
-        >modern web development</strong
-      > and the overall <strong>user experience</strong>. I love diving into new
-      frameworks, exploring UI/UX principles, and keeping up with evolving
-      frontend trends. However, what excites me most is <strong
-        >software architecture</strong
-      >. I aspire to become a software architect capable of designing <strong
-        >scalable</strong
-      >, <strong>maintainable</strong>, and well-thought-out systems. In the
-      meantime, I focus on applying <strong>SOLID principles</strong> and writing
-      clean, understandable code that stands the test of time.
-    </p>
-
-    <p>
-      As part of my academic journey, I’ve also had the chance to <strong
-        >create two small video games</strong
-      > as school projects: one built entirely from scratch in <strong>C</strong
-      >, and another using <strong>Unity and C#</strong>. These experiences
-      challenged me to think about performance, structure, and gameplay, and
-      they sparked my appreciation for how software and creativity can come
-      together.
-    </p>
-
-    <p>
-      Outside of work and code, I enjoy spending time with my friends and
-      partner—or immersing myself in my personal hobbies. I’ve been playing the <strong
-        >electric guitar</strong
-      > since late 2022 and love practicing songs I’m passionate about while improving
-      my technique. Another hobby of mine is collecting and restoring <strong
-        >old Nintendo consoles</strong
-      >, especially <strong>Game Boys</strong>. I buy broken or non-functional
-      units, repair or mod them with updated parts, and sometimes resell
-      them—combining my love for hardware, retro tech, and hands-on
-      problem-solving. And of course, I’m a big fan of <strong
-        >dark fantasy video games</strong
-      >.
-    </p>
-
-    <p>
-      Professionally, I've worked hard to grow not just as a developer, but as a
-      team player. Despite being at the beginning of my career, I’ve led
-      technical onboarding for new team members, conducted small-scale
-      functional analyses, and contributed to team-wide technical discussions.
-      I’ve even delivered both technical and functional training to
-      colleagues—experiences that have helped me develop strong <strong
-        >communication</strong
-      >, <strong>organization</strong>, and <strong>mentorship</strong> skills.
-    </p>
-
-    <p>
-      I'm always eager to learn, collaborate, and tackle new challenges. Whether
-      it's through building better systems, refining my code, or just sharing
-      what I know, I strive to make a meaningful contribution wherever I am.
-    </p>
+    <Timeline />
   </article>
 </BaseLayout>

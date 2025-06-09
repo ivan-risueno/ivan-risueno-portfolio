@@ -1,0 +1,32 @@
+---
+import '../styles/timeline.scss';
+
+const timelineItems = [
+  {
+    date: 'June 2024',
+    title: 'Finished my degree in Computer Engineering at UPC',
+    content: `After five years of hard work and dedication, I completed my degree in Computer Engineering at the Universitat Politècnica de Catalunya (UPC). This is a significant milestone in my academic journey.`,
+  },
+  {
+    date: 'December 2023',
+    title: 'Started working at Capgemini as a Software Engineer',
+    content: `Looking for an internship opportunity, I joined Capgemini, where I was able to apply my theoretical knowledge in a real-world setting. This experience made me learn about software development processes taken into reality. Also, I've met quite a few talented people who have inspired me to continue my career in technology, helping me making little steps into seniority along the way.`,
+  },
+  {
+    date: 'September 2019',
+    title: 'Joined the Faculty of Informatics of Barcelona at UPC',
+    content: `Joining the Faculty of Informatics of Barcelona at UPC was a significant step in my academic journey, where I finally started to delve into the world of computer science and software engineering. I learned about the fundamentals of computers, programming, algorithms, and data structures, which laid the foundation for my future studies and career in technology.`,
+  }
+];
+---
+
+<div class="container">
+  {timelineItems.map(item => {
+    return (
+      <div class="timeline-item" date-is={item.date}>
+        <h1>{item.title}</h1>
+        <p>{item.content}</p>
+      </div>
+    );
+  })}
+</div>

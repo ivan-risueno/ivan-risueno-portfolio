@@ -1,0 +1,67 @@
+h1 {
+	font-size: 1.2rem;
+	margin: .5em 0;
+  font-family: 'Open Sans', Courier, monospace;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+}
+
+.container {
+  padding-top: 1rem;
+	max-width: 1024px;
+	width: 95%;
+	margin: 0 auto;
+}
+
+$border-color: rgba(rgb(255, 255, 255), .3);
+
+.timeline-item {
+	padding: 3em 2em 2em;
+	position: relative;
+	color: rgba(rgb(255, 255, 255), .7);
+	border-left: 2px solid $border-color;
+	
+	p {
+		font-size: 1rem;
+	}
+	
+	&::before {
+		content: attr(date-is);
+		position: absolute;
+		left: 2em;
+		top: 1rem;
+		display: block;
+		font-family: 'Roboto', sans-serif;
+		font-weight: 700;
+		font-size: 0.8rem;
+	}
+
+	&::after {
+		width: 10px;
+		height: 10px;
+		display: block;
+		top: 1em;
+		position: absolute;
+		left: -7px;
+		border-radius: 10px;
+		content: '';
+		border: 2px solid $border-color;
+		background: white;
+	}
+
+	&:first-child {
+		border-image: linear-gradient(
+			to top,
+			$border-color 80%,
+			rgba($border-color, 0)) 1 100%
+		;
+	}
+
+	&:last-child {
+		border-image: linear-gradient(
+			to bottom,
+			$border-color 60%,
+			rgba($border-color, 0)) 1 100%
+		;
+	}
+}
