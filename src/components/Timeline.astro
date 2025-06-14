@@ -15,7 +15,7 @@ const timelineItems = [
   {
     date: 'September 2019',
     title: 'Joined the Faculty of Informatics of Barcelona at UPC',
-    content: `Joining the Faculty of Informatics of Barcelona at UPC was a significant step in my academic journey, where I finally started to delve into the world of computer science and software engineering. I learned about the fundamentals of computers, programming, algorithms, and data structures, which laid the foundation for my future studies and career in technology.`,
+    content: `Joining the Faculty of Informatics of Barcelona at UPC was the start of my journey as an engineer. As I wished for a long time, I finally started to delve into the world of computer science and software engineering. I learned about the fundamentals of computers, programming, algorithms, and data structures, which laid the foundation for my career in technology.`,
   }
 ];
 ---
@@ -24,7 +24,7 @@ const timelineItems = [
   {timelineItems.map(item => {
     return (
       <div class="timeline-item" date-is={item.date}>
-        <h1>{item.title}</h1>
+        <h3 class="timeline-item-title">{item.title}</h3>
         <p>{item.content}</p>
       </div>
     );

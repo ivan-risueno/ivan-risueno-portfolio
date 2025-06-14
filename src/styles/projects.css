@@ -9,14 +9,14 @@
 }
 
 .grid-item.large {
-  grid-column: span 2; /* Makes the 4th item (large) span 2 rows */
+  grid-column: span 2;
 }
 
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+    grid-template-columns: 1fr;
   }
   .grid-item.large {
-    grid-column: span 1; /* Reset the large item to span 1 column */
+    grid-column: span 1;
   }
 }

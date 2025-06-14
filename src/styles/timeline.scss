@@ -1,11 +1,3 @@
-h1 {
-	font-size: 1.2rem;
-	margin: .5em 0;
-  font-family: 'Open Sans', Courier, monospace;
-  font-weight: 700;
-  padding-bottom: 0.5rem;
-}
-
 .container {
   padding-top: 1rem;
 	max-width: 1024px;
@@ -20,6 +12,14 @@ $border-color: rgba(rgb(255, 255, 255), .3);
 	position: relative;
 	color: rgba(rgb(255, 255, 255), .7);
 	border-left: 2px solid $border-color;
+
+  .timeline-item-title {
+    font-size: 1.2rem;
+    margin: .5em 0;
+    font-family: 'Open Sans', Courier, monospace;
+    font-weight: 700;
+    padding-bottom: 0.5rem;
+  }
 	
 	p {
 		font-size: 1rem;
