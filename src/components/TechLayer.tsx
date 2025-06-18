@@ -1,4 +1,4 @@
-import '../styles/techLayer.scss';
+import '/src/styles/techLayer.scss';
 import type { TechLayerProps } from '../types/TechLayerProps';
 
 export default function TechLayer({ id, title, technologies, baseColor }: TechLayerProps) {

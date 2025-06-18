@@ -41,7 +41,7 @@ container {
     margin: auto;
     font-weight: 500;
     font-size: larger;
-    font-family: "Azeret Mono", monospace;
+    font-family: "Azeret Mono", monospace !important;
     font-optical-sizing: auto;
     font-style: normal;
 
@@ -75,7 +75,7 @@ container {
     color: whitesmoke;
     font-weight: 300;
     font-size: medium;
-    font-family: 'Host Grotesk', monospace;
+    font-family: 'Host Grotesk', monospace !important;
     font-style: normal;
 
     &:hover {

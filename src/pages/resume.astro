@@ -1,6 +1,6 @@
 ---
-import "../styles/resume.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import "/src/styles/resume.css";
 import PDFViewer from "../components/PDFViewer.astro";
 ---
 
@@ -10,32 +10,37 @@ import PDFViewer from "../components/PDFViewer.astro";
     <p class="language-selector">
       My resume is available in
       <a class="lang-btn" data-src="/ivan-risueno-cv-es.pdf#view=Fit"
-        ><strong>Spanish</strong></a>
-       and
+        ><strong>Spanish</strong></a
+      >
+      and
       <a class="lang-btn" data-src="/ivan-risueno-cv-en.pdf#view=Fit"
         ><strong>English</strong></a
       >.
     </p>
-    <div class="pdf-viewer"><PDFViewer id="pdf-frame" src="/ivan-risueno-cv-es.pdf#view=Fit" /></div>
+    <div class="pdf-viewer">
+      <PDFViewer id="pdf-frame" src="/ivan-risueno-cv-es.pdf#view=Fit" />
+    </div>
     <p class="mobile-hint">
-      PDFs are not able to display directly on mobile devices. Instead, you can download the <a
+      PDFs are not able to display directly on mobile devices. Instead, you can
+      download the <a
         href="/ivan-risueno-cv-es.pdf"
         class="resume-link-download"><strong>Spanish version</strong></a
-      > or the <a
-        href="/ivan-risueno-cv-en.pdf"
-        class="resume-link-download"><strong>English version</strong></a
+      > or the <a href="/ivan-risueno-cv-en.pdf" class="resume-link-download"
+        ><strong>English version</strong></a
       >.
     </p>
   </article>
   <script>
-  document.querySelectorAll(".lang-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const src = btn.getAttribute("data-src");
-      const pdfFrame = document.getElementById("pdf-frame") as HTMLIFrameElement;
-      if (pdfFrame && !pdfFrame.src.endsWith(src || "")) {
-        pdfFrame.src = src || "";
-      }
+    document.querySelectorAll(".lang-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const src = btn.getAttribute("data-src");
+        const pdfFrame = document.getElementById(
+          "pdf-frame",
+        ) as HTMLIFrameElement;
+        if (pdfFrame && !pdfFrame.src.endsWith(src || "")) {
+          pdfFrame.src = src || "";
+        }
+      });
     });
-  });
-</script>
+  </script>
 </BaseLayout>
