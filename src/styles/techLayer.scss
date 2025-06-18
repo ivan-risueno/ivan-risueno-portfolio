@@ -2,7 +2,7 @@
   padding: 10px 15px;
   border-radius: 10px;
   transition: transform 0.3s ease;
-
+  cursor: default;
   border: 1px solid var(--base-color);
 
   font-family: 'Open Sans', Courier, monospace;
@@ -11,6 +11,10 @@
   color: var(--base-color);
   background: color-mix(in srgb, var(--base-color), black 90%);
   filter: brightness(1.2);
+
+  @media (max-width: 400px) {
+    padding: 10px;
+  }
 }
 
 .stack-layer.active {

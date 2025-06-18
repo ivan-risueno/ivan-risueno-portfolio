@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import "../styles/techStack.scss";
+import { useState, useEffect } from "react";
 import TechLayer from "./TechLayer.tsx";
 import { TechStackItem, TechStackData } from "../types/TechStackItem";
 import type { TechLayerProps } from "../types/TechLayerProps.ts";

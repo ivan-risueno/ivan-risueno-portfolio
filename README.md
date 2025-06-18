@@ -4,7 +4,7 @@ Welcome to my personal developer portfolio, built from scratch using Astro. This
 
 ## 🚀 Tech Stack
 
-- Framework: Astro
+- Framework: Astro + React
 - Styling: SCSS + CSS (custom components & animations)
 - Deployment: GitHub Pages
 - Fonts: Google Fonts (typographic exploration for readability and style)
@@ -24,4 +24,4 @@ Welcome to my personal developer portfolio, built from scratch using Astro. This
 
 ## 📬 Contact
 
-You can reach me via [LinkedIn](https://www.linkedin.com/in/iv%C3%A1n-risue%C3%B1o-mart%C3%ADn-a4886a240/) or check out my other projects on GitHub.
+You can reach me via [LinkedIn](https://www.linkedin.com/in/irisueno/) or check out my other projects on GitHub.
