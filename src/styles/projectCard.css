@@ -1,0 +1,60 @@
+.material-symbols-outlined {
+  vertical-align: middle;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.project-image {
+  object-fit: cover;
+  border-radius: 0.8rem;
+}
+
+.project-title {
+  font-size: 1rem;
+  margin: 0;
+  font-family: 'Open Sans', Courier, monospace;
+  font-weight: 700;
+  color: rgb(219, 219, 219);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.project-summary {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.project-link, .project-link {
+  display: block;
+  width: fit-content;
+  transition: color 0.3s ease-in-out;
+
+  * {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  &:hover, *:hover {
+    color: #ff6347;
+  }
+}
+
+@media (max-width: 400px) {
+  .project-card {
+    justify-content: center;
+  }
+
+  .project-image {
+    
+  }
+}

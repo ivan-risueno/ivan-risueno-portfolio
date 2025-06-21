@@ -30,6 +30,16 @@
   color: white;
 }
 
+a, strong {
+  color: #ff6347;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #ff4500;
+    font-weight: 200;
+  }
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;

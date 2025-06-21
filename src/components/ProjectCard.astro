@@ -1,23 +1,37 @@
 ---
-import "/src/styles/project.css";
+import "/src/styles/projectCard.css";
 import TechTag from "./TechTag.astro";
 
 const { project } = Astro.props;
 const { title, summary, tags, img, githubUrl, publishedAt } = project.data;
 ---
 
-<a
-  href={githubUrl}
-  target="_blank"
-  rel="noopener noreferrer"
-  class="project-card"
-  style={`background-image: url(${"/images/" + img});`}
->
-  <div class="overlay">
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+/>
+<div class="project-card">
+  <img
+    class="project-image"
+    src={`/images/${img}`}
+    alt={title}
+    class="project-image"
+  />
+  <div class="project-details">
     <h3 class="project-title">{title}</h3>
-    <div class="tags">
+    <div class="project-tags">
       {tags.map((tag: "") => <TechTag tag={tag} />)}
-      <p class="project-summary">{summary}</p>
     </div>
-  </div></a
->
+    <p class="project-summary">{summary}</p>
+    <a class="project-link"
+      href={githubUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <p>
+        View on GitHub
+        <span class="material-symbols-outlined"> arrow_right_alt </span>
+      </p>
+    </a>
+  </div>
+</div>
