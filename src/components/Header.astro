@@ -17,25 +17,25 @@ const { pathname } = Astro.url;
         <p class="risueno">Risueno</p>
       </a>
       <ul class="menu">
-        { pathname !== "/about" &&
+        { !pathname.endsWith("/about/") &&
         <a href="/about">
           <li class="icon"><About /></li>
           <li class="tag"><p>About me</p></li>
         </a>
         }
-        { pathname !== "/projects" &&
+        { !pathname.endsWith("/projects/") &&
           <a href="/projects">
             <li class="icon"><Projects /></li>
             <li class="tag"><p>Projects</p></li>
           </a>
         }
-        { pathname !== "/resume" &&
+        { !pathname.endsWith("/resume/") &&
           <a href="/resume">
             <li class="icon"><Resume /></li>
             <li class="tag"><p>Resume</p></li>
           </a>
         }
-        { pathname !== "/contact" &&
+        { !pathname.endsWith("/contact/") &&
           <a href="/contact">
             <li class="icon"><Contact /></li>
             <li class="tag"><p>Contact</p></li>
